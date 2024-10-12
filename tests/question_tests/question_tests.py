@@ -4,6 +4,7 @@ import unittest
 #follow this example to add questions b, c, and d for testing including their functions
 from src.question_a.question_a import test_config, get_assessment_value, get_tax_assessed
 from src.question_b.question_b import test_config, get_person_category
+from src.question_c.question_c import test_config, get_miles_per_hour
 
 class Test_Config(unittest.TestCase):
 
@@ -18,10 +19,11 @@ class Test_Config(unittest.TestCase):
     #     self.assertEqual(43.20, get_tax_assessed(6000))
     #     self.assertEqual(72, get_tax_assessed(10000))
 
-    def test_get_person_category(self):
-        self.assertEqual('infant', get_person_category(1).lower())
-        self.assertEqual('child', get_person_category(2).lower())
-        self.assertEqual('teenager', get_person_category(14).lower())
-        self.assertEqual('adult', get_person_category(20).lower())
+    # def test_get_person_category(self):
+    #     self.assertEqual('infant', get_person_category(1).lower())
+    #     self.assertEqual('child', get_person_category(2).lower())
+    #     self.assertEqual('teenager', get_person_category(14).lower())
+    #     self.assertEqual('adult', get_person_category(20).lower())
 
-
+    def test_get_miles_per_hour(self):
+        self.assertEqual(19.883872, get_miles_per_hour(32,60))
